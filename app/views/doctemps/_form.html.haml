@@ -1,0 +1,49 @@
+= form_for @doctemp do |f|
+  - if @doctemp.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@doctemp.errors.count, "error")} prohibited this doctemp from being saved:"
+      %ul
+        - @doctemp.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :dateofsigning
+    = f.text_field :dateofsigning
+  .field
+    = f.label :placeofsigning
+    = f.text_field :placeofsigning
+  .field
+    = f.label :nameofprincipal
+    = f.text_field :nameofprincipal
+  .field
+    = f.label :nationalityofprincipal
+    = f.text_field :nationalityofprincipal
+  .field
+    = f.label :businessofprincipal
+    = f.text_field :businessofprincipal
+  .field
+    = f.label :addressofprincipal
+    = f.text_field :addressofprincipal
+  .field
+    = f.label :nameofagent
+    = f.text_field :nameofagent
+  .field
+    = f.label :nationalityofagent
+    = f.text_field :nationalityofagent
+  .field
+    = f.label :businessofagent
+    = f.text_field :businessofagent
+  .field
+    = f.label :addressofagent
+    = f.text_field :addressofagent
+  .field
+    = f.label :nameofagencyoroffice
+    = f.text_field :nameofagencyoroffice
+  .field
+    = f.label :transaction
+    = f.text_field :transaction
+  .field
+    = f.label :acts
+    = f.text_field :acts
+  .actions
+    = f.submit 'Save'

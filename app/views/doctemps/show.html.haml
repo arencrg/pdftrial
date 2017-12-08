@@ -1,0 +1,43 @@
+#formtitle.h1	SPECIAL POWER OF ATTORNEY
+%br/
+.p	I, #{@doctemp.nameofprincipal}, of legal age, #{@doctemp.nationalityofprincipal}, with #{@doctemp.businessofprincipal} address at #{@doctemp.addressofprincipal}, do hereby name, constitute, and appoint #{@doctemp.nameofagent}, of legal age, #{@doctemp.nationalityofagent}, with #{@doctemp.businessofagent} address at #{@doctemp.addressofagent}, as my true and lawful agent and attorney-in-fact, and for and on my behalf, and in my name, place, and stead do the following acts:
+%br/
+1.	To represent me in transacting with #{@doctemp.nameofagencyoroffice} in relation to #{@doctemp.transaction} and perform the following acts: ((loop through the acts here in bullet form));
+%br/
+2.	To sign and execute, for and on my behalf, documents, papers, and instruments as may be necessary to effect the foregoing transaction; and
+%br/
+3. To do and perform all such other acts and things requisite and/or necessary to effectively carry out the above-mentioned functions.
+%br/
+HEREBY GRANTING unto the above-named attorney-in-fact full power and authority to do and perform any and all other acts and things necessary, proper and/or convenient to be done to effectively and successfully carry out the above-mentioned transaction, as though I myself have so performed it. This Special Power of Attorney remains in full force and effect until revoked in writing.
+%br/
+IN WITNESS WHEREOF, I have hereunto affixed my signature this day of #{@doctemp.dateofsigning}, in #{@doctemp.placeofsigning}.
+%br/
+_______________________
+%br/
+#{@doctemp.nameofprincipal}
+%br/
+Principal
+%br/
+%br/
+With my conforme:
+%br/
+________________________
+%br/
+#{@doctemp.nameofagent}
+%br/
+Agent/Attorney-in-Fact
+%br/
+%br/
+SUBSCRIBED AND SWORN TO BEFORE ME, this day of _______________ in _____________________, affiant exhibiting to me his/her_________________ issued on _________________ 2017 at _____________.
+%br/
+%br/
+
+Doc. No. _____; 						NOTARY PUBLIC
+Page No. _____;
+Book No. _____:
+Series of 2017.
+
+
+= link_to 'Edit', edit_doctemp_path(@doctemp)
+\|
+= link_to 'Back', doctemps_path

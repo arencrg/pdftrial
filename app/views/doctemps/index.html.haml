@@ -1,0 +1,39 @@
+%h1 Listing doctemps
+
+%table
+  %thead
+    %tr
+      %th Dateofsigning
+      %th Placeofsigning
+      %th Nameofprincipal
+      %th Nationalityofprincipal
+      %th Businessofprincipal
+      %th Addressofprincipal
+      %th Nameofagent
+      %th Nationalityofagent
+      %th Businessofagent
+      %th Addressofagent
+      %th
+      %th
+      %th
+
+  %tbody
+    - @doctemps.each do |doctemp|
+      %tr
+        %td= doctemp.dateofsigning
+        %td= doctemp.placeofsigning
+        %td= doctemp.nameofprincipal
+        %td= doctemp.nationalityofprincipal
+        %td= doctemp.businessofprincipal
+        %td= doctemp.addressofprincipal
+        %td= doctemp.nameofagent
+        %td= doctemp.nationalityofagent
+        %td= doctemp.businessofagent
+        %td= doctemp.addressofagent
+        %td= link_to 'Show', doctemp, format: :pdf
+        %td= link_to 'Edit', edit_doctemp_path(doctemp)
+        %td= link_to 'Destroy', doctemp, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Doctemp', new_doctemp_path
