@@ -9,7 +9,7 @@ class DoctempsController < ApplicationController
 
   # GET /doctemps/1
   # GET /doctemps/1.json
-  def show
+  def download
      @doctemp = Doctemp.find(params[:id])
      html = render_to_string(:action=>:show, :template=>"doctemps/show.html.haml", :handlers=>["haml"])
      pdf = WickedPdf.new.pdf_from_string(html)
@@ -18,6 +18,18 @@ class DoctempsController < ApplicationController
        :filename => "legaldoc_result.pdf",
        :disposition => 'attachment')
    end
+
+  def show
+     @doctemp = Doctemp.find(params[:id])
+     respond_to do |format|
+       format.pdf do
+         render :pdf => "legaldoc.pdf",
+           :template => "doctemps/show.html.haml",
+           :handlers=>["haml"]
+       end
+       format.html
+     end
+  end
 
   # GET /doctemps/new
   def new
@@ -42,6 +54,7 @@ class DoctempsController < ApplicationController
         format.json { render json: @doctemp.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to action: "index"
   end
 
   # PATCH/PUT /doctemps/1

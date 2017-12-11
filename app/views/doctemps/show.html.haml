@@ -1,39 +1,36 @@
 = stylesheet_link_tag wicked_pdf_asset_base64("pdf")
 
-#doctitle.h1	<center>SPECIAL POWER OF ATTORNEY</center>
+%h3 SPECIAL POWER OF ATTORNEY
 %br/
 %br/
 #legaldoc
-  .p	I, <strong>#{@doctemp.nameofprincipal}</strong>, of legal age, <strong>#{@doctemp.nationalityofprincipal}</strong> with <strong>#{@doctemp.businessofprincipal}</strong> address at <strong>#{@doctemp.addressofprincipal}</strong> do hereby name, constitute, and appoint <strong>#{@doctemp.nameofagent}</strong> of legal age, <strong>#{@doctemp.nationalityofagent}</strong> with <strong>#{@doctemp.businessofagent}</strong> address at <strong>#{@doctemp.addressofagent}</strong> as my true and lawful agent and attorney-in-fact, and for and on my behalf, and in my name, place, and stead do the following acts:
-  %br/
-  .p	1.	To represent me in transacting with <strong>#{@doctemp.nameofagencyoroffice}</strong> in relation to <strong>#{@doctemp.transaction}</strong> and perform the following acts:
+  %p	I, <span class="details">[NAME OF PRINCIPAL]</span>, of legal age,<span class="details">[NATIONALITY]</span>, with <span class="details">[RESIDENCE/BUSINESS]</span> address at <span class="details">[ADDRESS]</span>, do hereby name, constitute, and appoint <span class="details">[NAME OF AGENT]</span>, of legal age, <span class="details">[NATIONALITY]</span>, with <span class="details">[RESIDENCE/BUSINESS]</span> address at <span class="details">[ADDRESS]</span>, as my true and lawful agent and attorney-in-fact, and for and on my behalf, and in my name, place, and stead do the following acts:
+  %p	1.	To represent me in transacting with <span class="details">[NAME OF AGENCY/OFFICE]</span> in relation to <span class="details">[TRANSACTION]</span> and perform the following acts:
   %ul
-    %li <strong>#{@doctemp.acts} </strong>
-    %li <strong>#{@doctemp.acts} </strong>
-  .p	2.	To sign and execute, for and on my behalf, documents, papers, and instruments as may be necessary to effect the foregoing transaction; and
-  %br/
-  .p	3. To do and perform all such other acts and things requisite and/or necessary to effectively carry out the above-mentioned functions.
-  %br/
-  .p	HEREBY GRANTING unto the above-named attorney-in-fact full power and authority to do and perform any and all other acts and things necessary, proper and/or convenient to be done to effectively and successfully carry out the above-mentioned transaction, as though I myself have so performed it. This Special Power of Attorney remains in full force and effect until revoked in writing.
-  %br/
-  .p	IN WITNESS WHEREOF, I have hereunto affixed my signature this day of <strong>#{@doctemp.dateofsigning}</strong> in <strong>#{@doctemp.placeofsigning}</strong>.
+    %li <span class="details">[ACTS 1]</span>
+    %li <span class="details">[ACTS 2]</span>
+    %li <span class="details">[ACTS 3]</span>
+  %p	2.	To sign and execute, for and on my behalf, documents, papers, and instruments as may be necessary to effect the foregoing transaction; and
+  %p	3. To do and perform all such other acts and things requisite and/or necessary to effectively carry out the above-mentioned functions.
+  %p	HEREBY GRANTING unto the above-named attorney-in-fact full power and authority to do and perform any and all other acts and things necessary, proper and/or convenient to be done to effectively and successfully carry out the above-mentioned transaction, as though I myself have so performed it. This Special Power of Attorney remains in full force and effect until revoked in writing.
+  %p	IN WITNESS WHEREOF, I have hereunto affixed my signature this day of <span class="details">[DATE OF SIGNING]</span>, in <span class="details">[PLACE OF SIGNING]</span>.
   %br/
   %br/
-  #principalsig
-    _______________________
+  #rightalignsig
+    _________________________
     %br/
-    <strong>#{@doctemp.nameofprincipal}</strong>
+    <span class="details">[NAME]</span>
     %br/
 
-    <strong>Principal</strong>
+    <span class="details">Principal</span>
     %br/
 With my conforme:
 %br/
-________________________
+_________________________
 %br/
-<strong>#{@doctemp.nameofagent}</strong>
+<span class="details">[NAME]</span>
 %br/
-<strong>Agent/Attorney-in-Fact</strong>
+<span class="details">Agent/Attorney-in-Fact</span>
 %br/
 %br/
 SUBSCRIBED AND SWORN TO BEFORE ME, this day of _______________ in _____________________, affiant exhibiting to me his/her_________________ issued on _________________ 2017 at _____________.
@@ -51,3 +48,147 @@ SUBSCRIBED AND SWORN TO BEFORE ME, this day of _______________ in ______________
       %td Book No. _____:
     %tr
       %td Series of 2017.
+
+%br/
+%br/
+
+-# = DEMAND LETTER - LESSOR TEMPLATE
+
+%br/
+%br/
+
+<span class="details">[DATE]</span>
+%br/
+%br/
+<span class="details">[NAME OF LESSEE]</span>
+%br/
+<span class="details">[ADDRESS OF LESSEE]</span>
+%br/
+<span class="details">[ADDRESS OF LESSEE]</span>
+%br/
+%br/
+Dear <span class="details">[Mr/Ms.]</span> <span class="details">[LAST NAME OF LESSEE]</span>:
+%p I write in connection with your unpaid rental fees under our lease contract dated <span class="details">[DATE]</span> over the property located in <span class="details">[COMPLETE ADDRESS OF THE PROPERTY]</span>.
+%p Since <span class="details">[STARTING DATE]</span> until to date, you have failed to pay your rental fees in the total amount of <span class="details">[AMOUNT IN WORDS] PESOS (PhP [AMOUNT IN FIGURES]</span>).
+%p Demand is hereby made upon you to pay the amount of <span class="details">[AMOUNT IN WORDS][PESOS] (PhP [AMOUNT IN FIGURES])</span> directly to me within <span class="details">[DAYS IN WORDS] ([DAYS IN FIGURES]</span>) from receipt of this letter.
+%p I reserve the right to pursue any and all legal remedies against you, including asking you to vacate the premises and filing any action for damages, if you continue to fail to pay and update your rental payments.
+%p Should you have any questions or wish to discuss, please don’t hesitate to contact me at <span class="details">[PHONE NUMBER]</span> or at <span class="details">[E-MAIL ADDRESS]</span>.
+%p Your utmost attention and cooperation is appreciated.
+%br/
+Very truly yours,
+%br/
+%br/
+_________________________
+%br/
+<span class="details">[NAME OF LESSOR]</span>
+
+
+%br/
+%br/
+
+-# AFFIDAVIT OF LOSS OF ID
+
+%br/
+%br/
+
+REPUBLIC OF THE PHILIPPINES	(________________________)
+
+%h3 AFFIDAVIT OF LOSS
+#legaldoc
+  %p	I, <span class="details">[NAME]</span>, of legal age, <span class="details">[NATIONALITY]</span>, with <span class="details">[RESIDENCE/OFFICE]</span> address at <span class="details">[ADDRESS]</span> having been duly sworn in accordance with law, hereby depose and say that:
+  %p	1. I am the holder of <span class="details">[ID]</span> with number <span class="details">[NUMBER]</span>.
+  %p	  2. I have recently discovered that the said <span class="details">[ID]</span> has been lost and can no longer be found despite diligent efforts to locate the same.
+  %p	3. I am executing this Affidavit to attest to the truthfulness and veracity of the foregoing for <span class="details">[SPECIFIC PURPOSE/WHATEVER LEGAL PURPOSE IT MAY SERVE]</span>.
+  %p	IN WITNESS WHEREOF, I have hereunto affix my signature this day of <span class="details">[DATE OF SIGNING]</span>, in <span class="details">[PLACE OF SIGNING]</span>.
+%br/
+%br/
+#rightalignsig
+  _________________________
+  %br/
+  <span class="details">[NAME]</span>
+  %br/
+  <span class="details">Affiant</span>
+%br/
+%br/
+SUBSCRIBED AND SWORN TO BEFORE ME, this day of _______________ in _____________________, affiant exhibiting to me his/her_________________ issued on _________________ 2017 at _____________.
+%br/
+%br/
+%br/
+%table{:border => 0}
+  %tbody
+    %tr
+      %td{:width => "50%"} Doc. No. _____;
+      %td NOTARY PUBLIC
+    %tr
+      %td Page No. _____;
+    %tr
+      %td Book No. _____:
+    %tr
+      %td Series of 2017.
+
+
+
+-# TREASURER'S AFFIDAVIT
+
+%h3 TREASURER’S AFFIDAVIT
+
+REPUBLIC OF THE PHILIPPINES 		)
+%br/
+CITY/MUNICIPALITY OF 				)  ss.
+
+#legaldoc
+  %p I, <span class="details">[NAME OF TREASURER]</span>, being duly sworn to, depose and say:
+
+  %p That I have been elected by the subscribers of <span class="details">[NAME OF THE CORPORATION]</span> (the “Corporation”) as Treasurer thereof, to act as such until my successor has been duly elected and qualified in accordance with the by-laws of the Corporation, and that as such Treasurer, I hereby certify under oath that at least 25% of the authorized capital stock of the Corporation has been subscribed and at least 25% of the total subscriptions has been paid, and received by me, in cash or property, in the amount of PHILIPPINE PESOS <span class="details">[AMOUNT OF SUBSCRIBED CAPITAL STOCK IN WORDS](PhP[AMOUNT OF SUBSCRIBED CAPITAL STOCK IN FIGURES])</span> in accordance with the Corporation Code.
+  %br/
+  %br/
+#rightalignsig
+  _________________________
+  %br/
+  (Signature of Treasurer)
+
+
+%p SUBSCRIBED AND SWORN to before me, a Notary Public, for and in the City/Municipality of _______________, Province of_______________ this ______ day of ____________________, by _________________with identification number _____________________ issued at _______________ on _________________.
+
+
+%table{:border => 0}
+  %tbody
+    %tr
+      %td{:width => "50%"} Doc. No. _____;
+      %td NOTARY PUBLIC
+    %tr
+      %td Page No. _____;
+    %tr
+      %td Book No. _____:
+    %tr
+      %td Series of 2017.
+
+
+
+-# CONFIDENTIALITY
+
+%br/
+%br/
+
+%h3 CONFIDENTIALITY UNDERTAKING
+
+#legaldoc
+  %p I, <span class="details">[NAME OF SIGNATORY]</span>, <span class="details">[NATIONALITY]</span>, of legal age, and a resident of <span class="details">[RESIDENCE ADDRESS]</span>, hereby undertake the following confidentiality obligations in relation to my engagement as <span class="details">[ROLE]</span> by <span class="details">[NAME OF CLIENT]</span> (the “Client”) or otherwise my rendering of services in the latter’s favor in relation to the <span class="details">[THE PROJECT]</span> (the “Project”), subject of the services that I shall render (the “Engagement”):
+
+  %p 1. I acknowledge that pursuant to my Engagement and for the purpose of fullfiling my obligations thereunder, I shall be given access to information, in any form (including written, oral, or in electronic form), comprising or relating to the Engagement or the Project, such as but not limited to— (a) techniques; (b) schematics; (c) ideas, designs, and concepts; (d) contracts, whether executed or proposed; (e) financial information; (f) sales and marketing plans; (g) business plans; (h) clients; (i) client data; (j) business affairs; (k) operations; (l) strategies and trade secrets; (m) inventions; (n) methodologies; (o) technologies; (p) formulae; and (q) products and/or services, that may or may not be clearly indicated by the Client as confidential ("Confidential Information”);
+
+  %p 2. I shall hold and maintain all Confidential Information in strictest confidence and shall not disclose the same to any third party other than to those as expressly authorized by the Client;
+
+  %p 3. I shall use the Confidential Information solely in furtherance of the Engagement and as expressly instructed by the Client and will take all reasonable measures to maintain the confidentiality of the Confidential Information; and
+
+  %p 4. I shall not use the Confidential Information in any way that is directly or indirectly detrimental to the Client, the Project, and the Engagement and hereby acknowledge that all rights, title, and interests over all Confidential Information shall be retained by the Client and/or such other persons who may have provided them in relation to the Project or the Engagement.
+
+  %p This Confidentiality Undertaking shall have retroactive effect to the date of my first contact with the Client regarding the Engagement, and shall continue to be in force and effect until after <span class="details">[YEARS, in words (figures)]</span> from the termination of the Engagement.
+
+#rightalignsig
+  _________________________
+  %br/
+  <span class="details">[NAME OF SIGNATORY]</span>
+  %br/
+  %br/
+  Date: ______________
